@@ -1,0 +1,127 @@
+{
+    "products" : {
+        "001" : {
+            "id":"001",
+            "category":"성인",
+            "isBest":true,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/adult00.jpg?alt=media&token=3583b34c-7590-415d-8c65-ad2dee563274",
+            "name":"롤리",
+            "text":"넓은 바구니에 간식을 담아 나만의 롤리 여행 즐기기",
+            "tag":"#다목적 #튼튼한 짐받이 #라이프 스타일",
+            "framSize":"25cm",
+            "wheelSize":"18inch",
+            "framShape":"크로스바",
+            "detailImg":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/lolly_detail.jpg?alt=media&token=d3093937-e1c5-4ca8-a96c-c442e3e53a8e"
+        },
+        "002" : {
+            "id":"002",
+            "category":"성인",
+            "isBest":false,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/adult01.jpg?alt=media&token=babd7c74-96b9-482b-bff9-8c08b5f169d8",
+            "name":"파이오니어",
+            "text":"도시의 거리를 질주하는 데 적합하도록 맞춤 제작형 자전거",
+            "tag":"#hashtag",
+            "framSize":"45cm",
+            "wheelSize":"24inch",
+            "framShape":"크로스바"
+        },
+        "003" : {
+            "id":"003",
+            "category":"성인",
+            "isBest":false,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/adult02.jpg?alt=media&token=f0eff172-c58c-47be-84ad-fde841fb45d3",
+            "name":"호파",
+            "text":"누구나 타고 내리기 쉬운 대표 시티형 자전거",
+            "tag":"#hashtag",
+            "framSize":"45cm",
+            "wheelSize":"24inch",
+            "framShape":"Low step"
+        },
+        "004" : {
+            "id":"004",
+            "category":"성인",
+            "isBest":false,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/adult03.jpg?alt=media&token=27f60f91-65c1-48f0-b67d-f9929b2cf292",
+            "name":"투머로우",
+            "text":"초보자도 쉽게 사용할 수 있는 접이식 자전거",
+            "tag":"#hashtag",
+            "framSize":"28cm",
+            "wheelSize":"20inch",
+            "framShape":"크로스바"
+        },
+        "005" : {
+            "id":"005",
+            "category":"산악",
+            "isBest":false,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/mountain00.jpg?alt=media&token=800e7d65-f8c5-4979-b97e-8d745b91e57d",
+            "name":"아팔란치아",
+            "text":"본격적인 산악 바이크 입문을 위한 기본형 산악 자전거",
+            "tag":"#hashtag",
+            "framSize":"28cm",
+            "wheelSize":"18inch",
+            "framShape":"크로스바",
+            "detailImg":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/appalanchia_detail.jpg?alt=media&token=1db44690-ab37-45eb-bbd2-312f816f1c1e"
+        },
+        "006" : {
+            "id":"006",
+            "category":"전기",
+            "isBest":true,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/electric01.jpg?alt=media&token=d649ec52-9c14-43f4-bb6d-25b437943ce7",
+            "name":"어레이",
+            "text":"사이클링의 즐거움을 재발견하고 싶을 땐, 어레이 전기 자전거",
+            "tag":"#hashtag",
+            "framSize":"40cm",
+            "wheelSize":"18inch",
+            "framShape":"Low step"
+        },
+        "007" : {
+            "id":"007",
+            "category":"전기",
+            "isBest":false,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/electric00.jpg?alt=media&token=8d3ed809-519f-4837-a7de-563d9302138e",
+            "name":"팬텀",
+            "text":"생활 속에서 가볍게 탈 수 있는 미니벨로형 전기 자전거",
+            "tag":"#hashtag",
+            "framSize":"26cm",
+            "wheelSize":"26inch",
+            "framShape":"Low step"
+        },
+        "008" : {
+            "id":"008",
+            "category":"주니어",
+            "isBest":false,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/junior02.jpg?alt=media&token=97ce1ac3-777b-4ffc-8426-f26c5effba11",
+            "name":"딩고",
+            "text":"작은 탐험가를 위해 전문적으로 제작된 주니어 자전거",
+            "tag":"#내부케이블 #작은 손을 위해 설계된 브레이크 #모든 모험을 위한 타이어",
+            "framSize":"25cm",
+            "wheelSize":"18inch",
+            "framShape":"크로스바",
+            "detailImg":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/dingo_detail.jpg?alt=media&token=cfb9b51e-f187-4b11-b614-ac4522c1da85"
+        },
+        "009" : {
+            "id":"009",
+            "category":"주니어",
+            "isBest":false,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/junior01.jpg?alt=media&token=e02054e9-99e9-4230-b373-f8fcc9625642",
+            "name":"팝",
+            "text":"꾸준히 사랑받고 있는 팝 주니어 자전거",
+            "tag":"#hashtag",
+            "framSize":"22cm",
+            "wheelSize":"12inch",
+            "framShape":"크로스바"
+        },
+        "010" : {
+            "id":"010",
+            "category":"주니어",
+            "isBest":true,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/junior00.jpg?alt=media&token=c3486d85-4a08-4146-9b17-3bbb3bb3b501",
+            "name":"클로버",
+            "text":"개성만점 주니어 자전거",
+            "tag":"#hashtag",
+            "framSize":"23cm",
+            "wheelSize":"16inch",
+            "framShape":"크로스바"
+        }
+    }
+}

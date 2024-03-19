@@ -1,0 +1,134 @@
+div.header_wrap{
+    width: 100%;
+    height: 270px;
+    min-width:768px;
+    background: linear-gradient(to bottom,  rgb(255,255,255) 0%,rgb(255,255,255) 70px,rgb(238,238,238,.5) 70px,rgb(238,238,238,.5) 100%);
+    z-index: 2;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+header{
+    width: 1280px;
+    height:100%; /* 70+200=270 */
+    /* overflow: hidden; */
+    margin: 0px auto;
+    position: relative;
+    top:0;
+    left: 0;
+    
+}
+h1.logo{
+    width: 186px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+h1.logo img{
+    width: 100%;
+}
+nav.mainmenu{
+    /* width: 528px; */
+    width: 41.25%;
+    height: 20px;
+    position: absolute;
+    top: 26px;
+    /* left: 340px; */
+    left:26.56%;
+}
+ul.mainmenu_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+}
+ul.mainmenu_list>li{
+    width: 20%;
+    height: 100%;
+    font: normal 14px/20px "Noto+Sans+KR";
+    text-align: center;
+}
+ul.mainmenu_list>li.selected a{
+    font-weight: bold;
+    color: #F0EC99;
+}
+ul.submenu_list{
+    width: 100%;
+    height: 200px;
+    margin-top: 25px;
+    text-align: center;
+    position: relative;
+    top:0;
+    left: 0;
+}
+ul.submenu_list>li{
+    width: 100%;
+    height: 40px;
+    font: normal 14px/40px "Noto+Sans+KR";
+}
+div.joinmap{
+    width: 230px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+ul.join{
+    width: 100px;
+    height: 30px;
+    float: left;
+}
+ul.join li{
+    font: normal 12px/30px "Noto+Sans+KR";
+    float: left;
+    margin-right: 16px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+ul.join li:nth-child(1)::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 14px;
+    background: #000;
+    position: absolute;
+    left: 42px;
+    top: 9px;
+}
+ul.join li:nth-child(2){
+    margin-right: 0px;
+}
+div.map{
+    width: 120px;
+    height: 30px;
+    border: solid 1px #000;
+    box-sizing: border-box;
+    float: right;
+    position: relative;
+    top:0;
+    left: 0;
+}
+div.map img{
+    width: 14px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+div.map p{
+    font: normal 12px "Noto+Sans+KR";
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+@media screen and (max-width: 1280px){
+    header{
+        width: 100%
+    }
+}
+@media screen and (max-width: 980px){
+    
+}

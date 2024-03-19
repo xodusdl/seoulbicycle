@@ -1,0 +1,87 @@
+section.bicycle{
+    width: 1280px;
+    height: 520px;
+    margin: 0px auto;
+    position: relative;
+    top:0;
+    left: 0;
+    min-width:768px;
+}
+p.title{
+    width: 100%;
+    height: 110px;
+    font: bold 30px/110px "Noto+Sans+KR";
+    text-align: center;
+}
+ul.menu{
+    width:700px;
+    height: 30px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+}
+ul.menu li{
+    height: 100%;
+    font: normal 14px/30px "Noto+Sans+KR";
+    text-align: center;
+}
+ul.menu li.selected{
+    border-bottom: solid 2px #E56F7C;
+    font-weight: bold;
+    color: #E56F7C;
+    box-sizing: border-box;
+}
+ul.list{
+    width:1140px;
+    /* width: 89.06%; */
+    height: 280px;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-top: 60px;
+}
+ul.list li{
+    width: 350px;
+    /* width: 30.70%; */
+    height: 100%;
+}
+ul.list li img{
+    width: 100%;
+}
+ul.list li p{
+    margin-top: 8px;
+    font: normal 16px/23px "Noto+Sans+KR";
+    text-align: center;
+}
+button{
+    width: 160px;
+    height: 30px;
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font: normal 14px/30px "Noto+Sans+KR";
+    color: #939393;
+}
+@media screen and (max-width: 1280px){
+    section.bicycle{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1140px){
+    ul.menu{
+        width: 500px;
+    }
+
+    ul.list{
+        overflow: hidden;
+        width: 740px;
+    }
+}
+@media screen and (max-width: 980px){
+}

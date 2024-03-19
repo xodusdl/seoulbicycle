@@ -1,0 +1,62 @@
+section.renatal{
+    width: 1280px;
+    height: 770px;
+    margin: 0px auto;
+    min-width:768px;
+}
+p.title{
+    width: 100%;
+    height: 110px;
+    font: bold 30px/110px "Noto+Sans+KR";
+    text-align: center;
+}
+div.renatal_info{
+    width: 100%;
+    height: 470px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.box{
+    width: 30.46%;
+    /* width: 390px; */
+    height: 100%;
+    border-top: solid 2px #2E463B;
+    box-sizing: border-box;
+    position: relative;
+    top:0px;
+    left: 0px;
+}
+div.box_title{
+    width: 136px;
+    height: 30px;
+    background: #2E463B;
+    font: bold 14px/30px "Noto+Sans+KR";
+    text-align: center;
+    color: #fff;
+}
+p.box_text{
+    font: normal 16px/23px "Noto+Sans+KR";
+    position: absolute;
+    top:90px;
+    left: 0;
+}
+div.box img{
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (max-width: 1280px){
+    section.renatal{
+        width: 100%
+    }
+}
+@media screen and (max-width: 980px){
+
+}

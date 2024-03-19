@@ -1,0 +1,57 @@
+section.info{
+    width: 100%;
+    height: 440px;
+    box-sizing: border-box;
+    /* background: #cafdc6; */
+    /* margin 티안나게 */
+    overflow: hidden;
+}
+div.info_text_box{
+    width: 100%;
+    height: 70px;
+    margin: 40px 0;
+}
+p.info_title{
+    width: 100%;
+    font: bolder 16px/23px "Noto+Sans+KR";
+    text-align: center;
+    margin-bottom: 10px;
+}
+p.info_text{
+    width: 100%;
+    font: normal 12px/17px "Noto+Sans+KR";
+    text-align: center;
+}
+ul.info_list{
+    width: 300px;
+    height: 260px;
+    display: grid;
+    margin: 0px auto;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 20px;
+    /* background: red; */
+}
+ul.info_list li{
+    width: 100%;
+}
+ul.info_list li div{
+    width: 100%;
+    height: 90px;
+    /* background: yellow; */
+    position: relative;
+}
+ul.info_list li div img{
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    margin-left: -30%;
+}
+ul.info_list li p{
+    font: normal 12px/15px "Noto+Sans+KR";
+    margin-top: 6px;
+    text-align: center;
+}
+
