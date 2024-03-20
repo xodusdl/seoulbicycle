@@ -12,8 +12,6 @@ export default function Header() {
         {index:3, name:'문의/FAQ', path:'/', subMenuList:[{index:6, name:'공지사항', path:'/'},{index:7, name:'문의하기', path:'/'},{index:8, name:'자주하는 질문', path:'/'}]}
     ]
     
-    
-    
    // const [ menu, setMenu ] = useState (allMenu)
     
     const [ selectedMenu, setSelectedMenu ] = useState ('')
@@ -25,7 +23,6 @@ export default function Header() {
     const headerWrap=useRef()
     const mainMenu=useRef([])
     const subMenu=useRef([])
-
 
     useEffect(()=>{
         //alert('test')
