@@ -60,7 +60,6 @@ export default function Bicycle() {
       </ul>
       <ul className={Style.list}>
         {
-          
           filterItems.map((item, index)=>( index<3 && <li> <Link to={`/product/${item.id}`}><img src={item.image} alt="상품이미지"/><p>{item.name}</p></Link> </li>))
         }
       

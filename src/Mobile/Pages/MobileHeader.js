@@ -1,17 +1,139 @@
-import React from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Style from './css/MobileHeader.module.css'
 import { CiMenuBurger } from "react-icons/ci";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import gsap from 'gsap';
 
 export default function MobileHeader() {
+
+  const mainMenuList=[ 
+    {index:0, name:'Home', path:'/', subMenuList:[]},
+    {index:1, name:'소개', path:'/', subMenuList:[{index:0, name:'브랜드', path:'/'},{index:1, name:'연혁', path:'/'}]},
+    {index:2, name:'이용안내', path:'/', subMenuList:[]},
+    {index:3, name:'자전거', path:'/', subMenuList:[{index:0, name:'성인', path:'/'},{index:1, name:'주니어', path:'/'},{index:2, name:'산악', path:'/'},{index:3, name:'전기', path:'/'}]},
+    {index:4, name:'문의/FAQ', path:'/', subMenuList:[{index:0, name:'공지사항', path:'/'},{index:1, name:'문의하기', path:'/'} ,{index:2, name:'자주하는 질문', path:'/'}]}
+  ]
+
+  const menuWrap=useRef();
+  const menuBtn=useRef();
+  const closeBtn=useRef();
+  const grayLayer=useRef();
+
+  // 초기좌표 하나 추가
+  useEffect(()=>{
+    grayLayer.current.style.display='none'
+    menuWrap.current.style.left='-70vw'
+    menuWrap.current.style.display='none'
+  },[])
+
+  const menuOpen=useCallback(()=>{ // useCallback() 사용하여 리렌더링시 실행 최소화
+    gsap.set('body,html', {overflow:'hidden'})  // 전체 스크롤 막기
+    menuWrap.current.style.display='block'
+    grayLayer.current.style.display='block'
+    gsap.to(menuWrap.current, {left:0, duration:0.5, ease:'power1.out'})
+  }, [])
+
+  const menuClose=()=>{
+    grayLayer.current.style.display='none'
+    gsap.to(menuWrap.current, {left:'-70vw', duration:0.5, ease:'power1.out',
+        onComplete:()=>{
+        menuWrap.current.style.display='none'
+        gsap.set('body,html', {overflow:'visable'})
+    }})
+    setSelectedIndex(null)
+  }
+
+  // 선택한 menuindex 담아주고 useState
+  const [selectedIndex, setSelectedIndex] = useState(null)
+  // 이게 menuActiveIndex 되는거 담아줘
+  const menuActiveIndex=(index)=>{
+      setSelectedIndex(index)
+  }
+
+
   return (
-<header className={Style.header}>
+  <header className={Style.header}>
     <h1><img src="/images/mobile_logo.png" alt="logo"/></h1>
-    <nav className={Style.mobile_menu}>
+    <nav className={Style.mobile_menu} ref={menuBtn} onClick={menuOpen}>
         <h2 className='hidden'>메인메뉴</h2>
         <CiMenuBurger/>
     </nav>
-    <div className={Style.mobile_location} ><FaMapMarkerAlt /></div>
+    <div className={Style.mobile_location}><FaMapMarkerAlt /></div>
+    <nav id={Style.mobilemenu} ref={menuWrap} >
+      <div id={Style.mobilemenu_inner}>
+        <p>환영합니다.<br/>로그인 해주세요.
+            <span id={Style.mobileclose_btn} ref={closeBtn} onClick={menuClose}><img src="images/closebtn.png" alt="닫기"/></span>
+        </p>
+        <ul id={Style.mobileloginmenu}>
+            <li>로그인</li>
+            <li>회원가입</li>
+        </ul>
+          <ul id={Style.mobilemenu_list}>
+            {
+              mainMenuList.map((item)=>{
+                return(
+                  <>
+                  <li className={`${item.index===selectedIndex && Style.selected}`} style={item.index===selectedIndex ? {height:55+(55*item.subMenuList.length)} : {height:55}} onClick={()=>{
+                    menuActiveIndex(item.index!==selectedIndex ? item.index : null)
+                  }}>
+                    {item.subMenuList.length < 1 ? // 서브메뉴가 존재하지 않을때
+                      <>
+                        {item.name}
+                      </>
+                      :
+                      <>
+                        {item.name}
+                        <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
+                        <ul className={Style.mobilesubmenu_list}>
+                          {
+                            item.subMenuList.map((item)=>( // 서브메뉴 map() 으로 돌리기 
+                                <li>{item.name}</li>
+                            ))
+                          }
+                        </ul>
+                      </>
+                  }
+                  </li>
+                </>
+              )
+              })
+            }
+
+
+              {/* <li>HOME</li>
+              <li>소개
+                  <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
+                  <ul className={Style.mobilesubmenu_list}>
+                      <li>브랜드</li>
+                      <li>연혁</li>
+                  </ul>
+              </li>
+              <li>이용안내
+                  <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
+              </li>
+              <li>자전거
+                  <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
+                  <ul className={Style.mobilesubmenu_list}>
+                      <li>성인</li>
+                      <li>주니어</li>
+                      <li>전기</li>
+                      <li>산악</li>
+                  </ul>
+              </li>
+              <li>문의/FAQ
+                  <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
+                  <ul className={Style.mobilesubmenu_list}>
+                      <li>공지사항</li>
+                      <li>문의하기</li>
+                      <li>자주하는 질문</li>
+                  </ul>
+              </li> */}
+
+
+          </ul>
+      </div>
+  </nav>
+  <div id={Style.mobile_grayLayer} ref={grayLayer}></div>
 </header>
   )
 }
