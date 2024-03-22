@@ -1,0 +1,34 @@
+
+div.newsletter{
+    width: 100%;
+    height: 150px;
+    background: #efefef;
+    overflow: hidden;
+    padding: 0px 16px;
+    box-sizing: border-box;
+}
+p.title{
+    width: 100%;
+    /* height: 110px; */
+    font: bold 14px/20px "Noto+Sans+KR";
+    text-align: center;
+    margin: 20px 0px 30px 0px;
+}
+input.input_box{
+    background: none;
+    width: 200px;
+    height: 40px;
+    border: solid 1px #999;
+    text-indent: 16px;
+    box-sizing: border-box;
+    font: normal 14px/40px "Noto+Sans+KR";
+}
+button.input_button{
+    width: 140px;
+    height: 40px;
+    background: #4A705F;
+    border: none;
+    margin-left: 10px;
+    color: #fff;
+    font: normal 14px/40px "Noto+Sans+KR";
+} 
