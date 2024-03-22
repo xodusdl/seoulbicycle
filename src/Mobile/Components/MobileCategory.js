@@ -29,7 +29,8 @@ export default function MobileCategory() {
           </li>
         </ul>
 
-      <div className={Style.all}>전체보기 &#62;</div>
+      {/* <div className={Style.all}>전체보기 &#62;</div> */}
+      <button className={Style.all}>전체보기 &#62;</button>
     </section>
   )
 }

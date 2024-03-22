@@ -119,8 +119,7 @@ ul#mobileloginmenu li:last-child{
 }
 ul#mobilemenu_list{
     width:100%; 
-    height:400px; 
-    background: red;
+    height:275px; /*55*5개.. 선생님꺼는 400px*/
 }
 ul#mobilemenu_list>li{
     width:100%; 

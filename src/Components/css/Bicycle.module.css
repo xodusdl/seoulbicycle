@@ -57,7 +57,7 @@ ul.list li p{
     font: normal 16px/23px "Noto+Sans+KR";
     text-align: center;
 }
-button{
+button.view_more{
     width: 160px;
     height: 30px;
     border: none;

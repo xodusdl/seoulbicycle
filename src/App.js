@@ -11,6 +11,9 @@ import DetailProduct from './Pages/DetailProduct'
 import MobileRoot from './Mobile/Pages/MobileRoot'
 import MobileNotFound from './Mobile/Pages/MobileNotFound'
 import MobileHome from './Mobile/Pages/MobileHome'
+import MobileProduct from './Mobile/Components/MobileProduct' 
+import MobileProductsDetail from './Mobile/Components/MobileProductsDetail'
+
 
 import { isMobile } from 'react-device-detect';
 
@@ -27,8 +30,8 @@ export default function App() {
         children:[
             {index:true, element:<MobileHome/>},
             // {path:'/mobile/brand', element:<MobileBrand/>},
-            // {path:'/mobile/products', element:<MobileProducts/>},
-            // {path:'/mobile/products/:productId', element:<MobileProductsDetail/>} 
+            {path:'/mobile/product', element:<MobileProduct/>},
+            {path:'/mobile/product/:productId', element:<MobileProductsDetail/>} 
         ]
       }
     ])

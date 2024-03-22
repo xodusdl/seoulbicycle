@@ -4,6 +4,7 @@ import MobileInfo from '../Components/MobileInfo'
 import MobileBest from '../Components/MobileBest'
 import MobileBanner from '../Components/MobileBanner'
 import MobileCategory from '../Components/MobileCategory'
+import MobileNewsletter from '../Components/MobileNewsletter'
 
 export default function MobileHome() {
   return (
@@ -13,6 +14,7 @@ export default function MobileHome() {
     <MobileBest/>
     <MobileBanner/>
     <MobileCategory/>
+    <MobileNewsletter/>
     </>
 
 

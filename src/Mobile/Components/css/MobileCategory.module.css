@@ -90,14 +90,15 @@ div.location img{
     height: 100%;
     object-fit: contain;
 }
-div.all{
-    width: 70px;
+button.all{
+    width: 80px;
     height: 20px;
     font: normal 12px/20px "Noto+Sans+KR";
     background: none;
     text-align: center;
     color: #4A705F;
+    border: none;
     position: relative;
-    top:10px;
-    left: 270px;
+    top: 10px;
+    left: 260px;
 }

@@ -64,7 +64,7 @@ export default function Bicycle() {
         }
       
       </ul>
-      <button><Link to='/product'>자전거 전체보기</Link></button>
+      <button className={Style.view_more}><Link to='/product'>자전거 전체보기</Link></button>
     </section>
   )
 }

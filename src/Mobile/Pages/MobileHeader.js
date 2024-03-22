@@ -3,14 +3,15 @@ import Style from './css/MobileHeader.module.css'
 import { CiMenuBurger } from "react-icons/ci";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 
 export default function MobileHeader() {
 
   const mainMenuList=[ 
     {index:0, name:'Home', path:'/', subMenuList:[]},
     {index:1, name:'소개', path:'/', subMenuList:[{index:0, name:'브랜드', path:'/'},{index:1, name:'연혁', path:'/'}]},
-    {index:2, name:'이용안내', path:'/', subMenuList:[]},
-    {index:3, name:'자전거', path:'/', subMenuList:[{index:0, name:'성인', path:'/'},{index:1, name:'주니어', path:'/'},{index:2, name:'산악', path:'/'},{index:3, name:'전기', path:'/'}]},
+    {index:2, name:'이용안내', path:'/', subMenuList:[{index:0, name:'정기 구독권', path:'/'}, {index:0, name:'일일 구독권', path:'/'}]},
+    {index:3, name:'자전거', path:'/', subMenuList:[{index:0, name:'전체 카테고리', path:'/mobile/product'}, {index:1, name:'성인', path:'/'},{index:2, name:'주니어', path:'/'}, {index:3, name:'산악', path:'/'}, {index:4, name:'전기', path:'/'}]},
     {index:4, name:'문의/FAQ', path:'/', subMenuList:[{index:0, name:'공지사항', path:'/'},{index:1, name:'문의하기', path:'/'} ,{index:2, name:'자주하는 질문', path:'/'}]}
   ]
 
@@ -53,7 +54,7 @@ export default function MobileHeader() {
 
   return (
   <header className={Style.header}>
-    <h1><img src="/images/mobile_logo.png" alt="logo"/></h1>
+    <Link to='/'><h1><img src="/images/mobile_logo.png" alt="logo"/></h1></Link>
     <nav className={Style.mobile_menu} ref={menuBtn} onClick={menuOpen}>
         <h2 className='hidden'>메인메뉴</h2>
         <CiMenuBurger/>
@@ -62,7 +63,7 @@ export default function MobileHeader() {
     <nav id={Style.mobilemenu} ref={menuWrap} >
       <div id={Style.mobilemenu_inner}>
         <p>환영합니다.<br/>로그인 해주세요.
-            <span id={Style.mobileclose_btn} ref={closeBtn} onClick={menuClose}><img src="images/closebtn.png" alt="닫기"/></span>
+            <span id={Style.mobileclose_btn} ref={closeBtn} onClick={menuClose}><img src="/images/closebtn.png" alt="닫기"/></span>
         </p>
         <ul id={Style.mobileloginmenu}>
             <li>로그인</li>
@@ -83,11 +84,11 @@ export default function MobileHeader() {
                       :
                       <>
                         {item.name}
-                        <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
+                        <span className={Style.mobile_icon}><img src="/images/mobilemenu_icon04.png" alt=""/></span>
                         <ul className={Style.mobilesubmenu_list}>
                           {
                             item.subMenuList.map((item)=>( // 서브메뉴 map() 으로 돌리기 
-                                <li>{item.name}</li>
+                              <Link to={item.path}><li onClick={menuClose}>{item.name}</li></Link>
                             ))
                           }
                         </ul>

@@ -59,13 +59,13 @@ div.login p{
 div.login p span{
     font-weight: bold;
 }
-
 button.login_btn{
     width: 100px;
     height: 40px;
     background: #F0EC99;
     position: absolute;
     top: 22px;
+    right: 0;
     font: normal 14px/23px "Noto+Sans+KR";
     border: none;
     color: #000;
