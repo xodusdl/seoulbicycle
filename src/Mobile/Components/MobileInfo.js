@@ -7,7 +7,7 @@ export default function MobileInfo() {
         <ul className={Style.info_list}>
             <li>
                 <div className={Style.icon}><img src='/images/rental.svg' alt="렌탈"/></div>
-                <p className={Style.text}>대여 및 반납</p>
+                <p className={Style.text}>대여/반납</p>
             </li>
             <li>
               <div className={Style.icon}><img src='/images/payment.svg' alt="지불"/></div>
@@ -15,7 +15,7 @@ export default function MobileInfo() {
             </li>
             <li>
               <div className={Style.icon}><img src='/images/bicycle.svg' alt="자전거"/></div>
-              <p className={Style.text}>방치 자전거 발견</p>
+              <p className={Style.text}>방치/고장</p>
             </li>
             <li>
               <div className={Style.icon}><img src='/images/inquiry.svg' alt="문의"/></div>
