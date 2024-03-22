@@ -6,10 +6,9 @@ export default function MobileBanner() {
     <section className={Style.banner}>
       <div className={Style.info_img}>
         <div className={Style.img_text_box}>
-          <p>Experience the joy of cycling<br/>and unleash your inner<br/>adventurer !</p>
+          <p>Experience the joy of cycling and unleash your inner<br/>adventurer !</p>
         </div>
       </div>
     </section>
-
   )
 }
