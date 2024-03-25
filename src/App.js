@@ -31,8 +31,13 @@ export default function App() {
             {index:true, element:<MobileHome/>},
             // {path:'/mobile/brand', element:<MobileBrand/>},
             {path:'/mobile/product', element:<MobileProduct/>},
-            {path:'/mobile/product/:productId', element:<MobileProductsDetail/>} 
+            // {path:'/mobile/product/:productId', element:<MobileProductsDetail/>} 
         ]
+      },
+      {
+        path:'/mobile/product/:productId',
+        element:<MobileProductsDetail/>,
+        errorElement:<MobileNotFound/>
       }
     ])
   }else{

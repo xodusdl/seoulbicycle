@@ -23,7 +23,7 @@ export default function MobileInfo() {
             </li>
         </ul>
         <div className={Style.login}>
-          <p>로그인하여 <span>맞춤 제품을 추천</span>받아보세요!</p>
+          <p>로그인하여 <span>다양한 서비스</span>를 경험해보세요!</p>
           <button className={Style.login_btn}>로그인</button>
         </div>
     </section>

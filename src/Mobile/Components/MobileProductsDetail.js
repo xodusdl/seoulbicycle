@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Style from './css/MobileProductsDetail.module.css'
-import { GoArrowLeft } from "react-icons/go";
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getProductDetail } from '../../api/firebase';
+import MobileContentTitle from './MobileContentTitle';
 
 export default function MobileProductsDetail() {
 
@@ -10,6 +10,8 @@ export default function MobileProductsDetail() {
   // alert(productId)
 
   const [selectedItem, setSelectedItem] = useState({}) //{}오브젝트 넣어주기
+
+  // const [title, setTitle] = useState('')
 
   useEffect(()=>{
     getProductDetail(productId).then((res)=>{
@@ -21,14 +23,10 @@ export default function MobileProductsDetail() {
     
   },[productId])
 
+
   return (
     <section className={Style.detail}>
-      <div className={Style.title_box}>
-        <Link to='/mobile/product'>
-        <div className={Style.back_narrow}><GoArrowLeft /></div>
-        </Link>
-        <p className={Style.title}>상품상세</p>
-      </div>
+      <MobileContentTitle title='상세페이지'/>
       <div className={Style.img}>
         <img src={selectedItem?.image} alt={selectedItem?.name}/>
       </div>

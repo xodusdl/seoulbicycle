@@ -7,9 +7,9 @@ export default function Header() {
 
     const allMenu=[
         {index:0, name:'소개', path:'/about', subMenuList:[{index:0, name:'브랜드', path:'/'},{index:1, name:'연혁', path:'/'}]},
-        {index:1, name:'이용안내', path:'/', subMenuList:[]},
-        {index:2, name:'자전거', path:'/product', subMenuList:[{index:2, name:'성인', path:'/'},{index:3, name:'주니어', path:'/'},{index:4, name:'전기', path:'/'},{index:5, name:'산악', path:'/'}]},
-        {index:3, name:'문의/FAQ', path:'/', subMenuList:[{index:6, name:'공지사항', path:'/'},{index:7, name:'문의하기', path:'/'},{index:8, name:'자주하는 질문', path:'/'}]}
+        {index:1, name:'이용안내', path:'/', subMenuList:[{index:2, name:'정기 구독권', path:'/'}, {index:3, name:'일일 구독권', path:'/'}]},
+        {index:2, name:'자전거', path:'/product', subMenuList:[{index:4, name:'성인', path:'/'},{index:5, name:'주니어', path:'/'},{index:6, name:'전기', path:'/'},{index:7, name:'산악', path:'/'}]},
+        {index:3, name:'문의/FAQ', path:'/', subMenuList:[{index:8, name:'공지사항', path:'/'},{index:9, name:'문의하기', path:'/'},{index:10, name:'자주하는 질문', path:'/'}]}
     ]
     
    // const [ menu, setMenu ] = useState (allMenu)
@@ -34,16 +34,14 @@ export default function Header() {
             item.style.opacity=0
             item.style.display='none'
         }
-
         headerWrap.current.style.height='70px'
-
     },[])
 
     const openSubMenu=()=>{
         gsap.killTweensOf(headerWrap.current)
-        gsap.to(headerWrap.current, {height:270})
+        gsap.to(headerWrap.current, {height:270, duration:.6})
         gsap.killTweensOf(subMenu.current)
-        gsap.to(subMenu.current, {display:'block', delay:0.3, opacity:1})
+        gsap.to(subMenu.current, {display:'block', delay:0.1, opacity:1})
     }
 
     const closeSubMenu=()=>{
