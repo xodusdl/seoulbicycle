@@ -52,7 +52,6 @@ export default function Header() {
     }
 
 
-
   return (
     <div className={Style.header_wrap} ref={headerWrap} onMouseLeave={closeSubMenu}>
         <header>

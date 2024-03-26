@@ -1,60 +1,100 @@
 section.info{
     width: 1280px;
-    height: 670px;
+    height: auto;
     margin: 0px auto;
     min-width:768px;
-    position: relative;
-    top: 0px;
-    left: 0px;
+    overflow: hidden;
 }
 p.info_title{
-    width: 100%;
-    font: bold 36px/52px "Noto+Sans+KR";
+    font: bold 40px/58px "Noto+Sans+KR";
     text-align: center;
+    margin-top: 100px;
+    position: relative;
+    top:0;
+    left: 0;
+}
+p.info_title::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: #f0ec99cb;
     position: absolute;
-    top:100px;
+    top:0;
+    left: 30%;
 }
 p.info_text{
     width: 100%;
     font: normal 16px/32px "Noto+Sans+KR";
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+p.info_text span{
+    font-weight: bold;
+}
+div.info_box{
+    width: 100%;
+    height: 300px;
+    background: #F9F9F9;
+    padding: 0 70px;
+    box-sizing: border-box;
+    position: relative;
+    top:0;
+    left: 0;
+}
+p.user_icon{
+    font: normal 30px/30px "Noto+Sans+KR";
     position: absolute;
-    top:200px;
+    top: 40px;
+}
+p.user_text{
+    width: 400px;
+    height: 86px;
+    font: normal 30px/43px "Noto+Sans+KR";
+    position: absolute;
+    top: 77px;
+}
+p.user_text span{
+    color: #F0EC99;
+    font-weight: bold;
+}
+button.user_btn{
+    width: 120px;
+    height: 23px;
+    text-align: center;
+    font: bold 16px/23px "Noto+Sans+KR";
+    border:none;
+    background: none;
+    position: absolute;
+    bottom: 64px;
 }
 ul.info_list{
-    width: 980px;
-    height: 248px;
-    position: absolute;
-    top:310px;
-    left: 50%;
-    margin-left: -490px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(1,1fr);
-    grid-gap: 60px;
+    width: 520px;
+    height: 146px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-between;
+    float: right;
+    margin-top: 77px;
 }
 ul.info_list li{
-    width: 200px;
-    height: 100%;
+    width: 100px;
+    height: 146px;
 }
-ul.info_list li div{
-    width :100%;
-    height: 200px;
-    border-radius: 50%;
-    border: solid 4px #F0EC99;
+
+ul.info_list li img{
+    width: 100%;
+    height: 100px;
+    padding: 16px;
+    object-fit: contain;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-ul.info_list li div img{
-    width: 50%;
-    height: 50%;
+    border: solid 1px #D9D9D9;
 }
 ul.info_list li p{
     text-align: center;
-    font: normal 16px/40px "Noto+Sans+KR";
+    font: normal 18px/26px "Noto+Sans+KR";
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1280px){
@@ -63,7 +103,7 @@ ul.info_list li p{
     }
 }
 @media screen and (max-width: 980px){
-    section.info{
+    /* section.info{
         height: 930px;
     }
     ul.info_list{
@@ -74,5 +114,5 @@ ul.info_list li p{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
-    }
+    } */
 }

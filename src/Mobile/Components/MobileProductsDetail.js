@@ -31,7 +31,9 @@ export default function MobileProductsDetail() {
         <img src={selectedItem?.image} alt={selectedItem?.name}/>
       </div>
       <div className={Style.text_box}>
-        <div className={Style.best}>BEST</div>
+        {
+          selectedItem.isBest===true ? <div className={Style.best}>BEST</div> : ''
+        }
         <p className={Style.name}>{selectedItem?.name}</p>
         <p className={Style.text}>{selectedItem?.text}</p>
         <p className={Style.hashtag}>{selectedItem?.tag}</p>

@@ -2,16 +2,15 @@
     "products" : {
         "001" : {
             "id":"001",
-            "category":"성인",
-            "isBest":true,
-            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/adult00.jpg?alt=media&token=3583b34c-7590-415d-8c65-ad2dee563274",
-            "name":"롤리",
-            "text":"넓은 바구니에 간식을 담아 나만의 롤리 여행 즐기기",
-            "tag":"#다목적 #튼튼한 짐받이 #라이프 스타일",
-            "framSize":"25cm",
-            "wheelSize":"18inch",
-            "framShape":"크로스바",
-            "detailImg":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/lolly_detail.jpg?alt=media&token=d3093937-e1c5-4ca8-a96c-c442e3e53a8e"
+            "category":"전기",
+            "isBest":false,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/electric00.jpg?alt=media&token=8d3ed809-519f-4837-a7de-563d9302138e",
+            "name":"팬텀",
+            "text":"생활 속에서 가볍게 탈 수 있는 미니벨로형 전기 자전거",
+            "tag":"#hashtag",
+            "framSize":"26cm",
+            "wheelSize":"26inch",
+            "framShape":"Low step"
         },
         "002" : {
             "id":"002",
@@ -76,15 +75,16 @@
         },
         "007" : {
             "id":"007",
-            "category":"전기",
-            "isBest":false,
-            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/electric00.jpg?alt=media&token=8d3ed809-519f-4837-a7de-563d9302138e",
-            "name":"팬텀",
-            "text":"생활 속에서 가볍게 탈 수 있는 미니벨로형 전기 자전거",
-            "tag":"#hashtag",
-            "framSize":"26cm",
-            "wheelSize":"26inch",
-            "framShape":"Low step"
+            "category":"성인",
+            "isBest":true,
+            "image":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/adult00.jpg?alt=media&token=3583b34c-7590-415d-8c65-ad2dee563274",
+            "name":"롤리",
+            "text":"넓은 바구니에 간식을 담아 나만의 롤리 여행 즐기기",
+            "tag":"#다목적 #튼튼한 짐받이 #라이프 스타일",
+            "framSize":"25cm",
+            "wheelSize":"18inch",
+            "framShape":"크로스바",
+            "detailImg":"https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/lolly_detail.jpg?alt=media&token=d3093937-e1c5-4ca8-a96c-c442e3e53a8e"
         },
         "008" : {
             "id":"008",
