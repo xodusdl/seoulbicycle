@@ -15,6 +15,7 @@ import MobileBrand from './Mobile/Pages/MobileBrand'
 import MobileProduct from './Mobile/Pages/MobileProduct'
 import MobileCustomer from './Mobile/Pages/MobileCustomer'
 import MobileProductsDetail from './Mobile/Pages/MobileProductsDetail'
+
 import { isMobile } from 'react-device-detect';
 
 export default function App() {
