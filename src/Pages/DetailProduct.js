@@ -29,7 +29,6 @@ export default function DetailProduct() {
     window.scrollTo(0,0)
     
   },[productId])
-  
 
   return (
     <>
@@ -37,10 +36,10 @@ export default function DetailProduct() {
     <section className={Style.detail_product}>
       <nav className={Style.page_map}>
         <ul className={Style.page_map_list}>
-          <li></li>
-          <li><a href="#;">카테고리</a></li>
-          <li><a href="#;">{selectedItem?.category}</a></li>
-          <li><a href="#;">{selectedItem?.name}</a></li>
+          <li>홈</li>
+          <li>카테고리</li>
+          <li>{selectedItem?.category}</li>
+          <li>{selectedItem?.name}</li>
         </ul>
       </nav>
       

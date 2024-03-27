@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
+import gsap from 'gsap';
 import Style from './css/MobileHeader.module.css'
 import { CiMenuBurger } from "react-icons/ci";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import gsap from 'gsap';
 import { Link } from 'react-router-dom';
 
 export default function MobileHeader() {
@@ -10,7 +10,7 @@ export default function MobileHeader() {
   const mainMenuList=[ 
     {index:0, name:'Home', path:'/', subMenuList:[]},
     {index:1, name:'소개', path:'/', subMenuList:[{index:0, name:'브랜드', path:'/'},{index:1, name:'연혁', path:'/'}]},
-    {index:2, name:'이용안내', path:'/', subMenuList:[{index:0, name:'정기 구독권', path:'/'}, {index:0, name:'일일 구독권', path:'/'}]},
+    {index:2, name:'이용안내', path:'/', subMenuList:[{index:0, name:'정기 구독권', path:'/'}, {index:1, name:'일일 구독권', path:'/'}]},
     {index:3, name:'자전거', path:'/', subMenuList:[{index:0, name:'전체 카테고리', path:'/mobile/product'}, {index:1, name:'성인', path:'/'},{index:2, name:'주니어', path:'/'}, {index:3, name:'산악', path:'/'}, {index:4, name:'전기', path:'/'}]},
     {index:4, name:'문의/FAQ', path:'/', subMenuList:[{index:0, name:'공지사항', path:'/'},{index:1, name:'문의하기', path:'/'} ,{index:2, name:'자주하는 질문', path:'/'}]}
   ]
@@ -20,15 +20,14 @@ export default function MobileHeader() {
   const closeBtn=useRef();
   const grayLayer=useRef();
 
-  // 초기좌표 하나 추가
   useEffect(()=>{
     grayLayer.current.style.display='none'
     menuWrap.current.style.left='-70vw'
     menuWrap.current.style.display='none'
   },[])
 
-  const menuOpen=useCallback(()=>{ // useCallback() 사용하여 리렌더링시 실행 최소화
-    gsap.set('body,html', {overflow:'hidden'})  // 전체 스크롤 막기
+  const menuOpen=useCallback(()=>{
+    gsap.set('body,html', {overflow:'hidden'})
     menuWrap.current.style.display='block'
     grayLayer.current.style.display='block'
     gsap.to(menuWrap.current, {left:0, duration:0.5, ease:'power1.out'})
@@ -44,13 +43,11 @@ export default function MobileHeader() {
     setSelectedIndex(null)
   }
 
-  // 선택한 menuindex 담아주고 useState
   const [selectedIndex, setSelectedIndex] = useState(null)
-  // 이게 menuActiveIndex 되는거 담아줘
+
   const menuActiveIndex=(index)=>{
       setSelectedIndex(index)
   }
-
 
   return (
   <header className={Style.header}>

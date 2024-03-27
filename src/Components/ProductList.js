@@ -34,8 +34,8 @@ export default function ProductList() {
     <section className={Style.category}>
       <nav className={Style.page_map}>
         <ul className={Style.page_map_list}>
-          <li></li>
-          <li><a href="#;">카테고리</a></li>
+          <li>홈</li>
+          <li>카테고리</li>
         </ul>
       </nav>
       <Category allCategorys={allCategorys} category={category} onChangeCategory={changeCategory}/>

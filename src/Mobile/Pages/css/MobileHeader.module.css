@@ -5,7 +5,6 @@ header.header{
     left: 0px;
     top: 0px;
     z-index: 9;
-    background: red;
 }
 header.header h1{
     width: 46px;

@@ -29,11 +29,6 @@ ul.page_map_list li{
     top:0;
     left: 0;
 }
-ul.page_map_list li:nth-child(1){
-    height: 100%;
-    background: url('/public/images/nav.svg') no-repeat center;
-    background-size: contain;
-}
 ul.page_map_list li::before{
     content: ">";
     display: block;
