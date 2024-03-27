@@ -3,29 +3,17 @@ import Style from './css/DetailProduct.module.css'
 import SubVisual from '../Components/SubVisual'
 import { useParams } from 'react-router-dom'
 import { getProductDetail } from '../api/firebase'
-// import useProducts from '../Hooks/useProducts'
-
 
 export default function DetailProduct() {
 
   const {productId} = useParams()
-  //alert(productId)
 
-  // 1. 불러온거
-  // const [allProducts] = useProducts()
-  // 2. 불러온거에서 find 한거 <- 비동기 처리
-  // const selectedItem=allProducts.find((item)=>(item.id===productId))
-
-  // const selectedItem=getProductDetail()
-  //애는 비동기처리 가 안되고 끄집어 낼때까지 기다려야 하니깐
-  const [selectedItem, setSelectedItem] = useState({}) //{}오브젝트 넣어주기
+  const [selectedItem, setSelectedItem] = useState({})
 
   useEffect(()=>{
     getProductDetail(productId).then((res)=>{
       setSelectedItem(res)
     })
-
-    // 스크롤 올라가는거
     window.scrollTo(0,0)
     
   },[productId])
@@ -80,10 +68,8 @@ export default function DetailProduct() {
       </div>
 
       <div className={Style.detail_bicycle}>
-     
-        <img alt='' src={selectedItem?.detailImg ? selectedItem.detailImg : "https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/not_found_detail.jpg?alt=media&token=1e3ba370-6b81-48b8-8b11-d508b97d90d0"}/>
+        <img alt='' src={selectedItem?.detailImg ? selectedItem.detailImg : "https://firebasestorage.googleapis.com/v0/b/bicycle-bd1e7.appspot.com/o/not_found_detail.jpg?alt=media&token=875519c2-d18c-4abc-b152-1a3901b3db8a"}/>
       </div>
-
       <div className={Style.use_box}>
         <div className={Style.use_info}>
           <p>이용권 구매</p>

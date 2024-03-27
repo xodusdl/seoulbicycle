@@ -1,6 +1,5 @@
 section.visual{
     width: 100%;
-    /* height: 100vh; */
     height: 260px;
     position: relative;
     top:0;
@@ -13,20 +12,12 @@ div.visual_list{
     top: 0;
     left: 0;
 }
-/* div.visual_list div{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-} */
 div.visual_00{
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0px;
     top: 0px;
-    background: red;
     background:url('/public/images/visual00.jpg') no-repeat center; 
     background-size:cover;
 }
@@ -48,25 +39,3 @@ div.visual_02{
     background:url('/public/images/visual02.jpg') no-repeat center 0px; 
     background-size:cover;
 }
-/* ul.dot_list{
-    width: 50px;
-    height: 10px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    margin-left: -25px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:space-between;
-    
-} */
-/* ul.dot_list li{
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background: #fff;
-}
-ul.dot_list li.selected{
-    background: #F3F0AD;
-} */

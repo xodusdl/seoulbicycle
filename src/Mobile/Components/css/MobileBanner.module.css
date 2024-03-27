@@ -20,6 +20,6 @@ div.img_text_box{
     top:20px;
 }
 div.img_text_box p{
-    font: bold 16px/27px "Noto+Sans+KR";
+    font: normal 16px/27px "Noto Sans KR";
     color: white;
 }

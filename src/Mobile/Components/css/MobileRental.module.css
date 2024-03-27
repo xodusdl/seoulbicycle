@@ -1,23 +1,19 @@
 section.rental{
     width: 100%;
     height: 470px;
-    /* padding: 0 16px; */
-    box-sizing: border-box;
-    /* margin 티안나게 */
     overflow: hidden;
     margin-top: 30px;
+    background: yellow;
 }
 p.title{
     width: 100%;
-    /* height: 110px; */
-    font: bold 14px/20px "Noto+Sans+KR";
+    font: bold 14px/20px "Noto Sans KR";
     text-align: center;
     margin: 20px 0;
 }
 ul.rental_box{
     width: 100%;
     height: auto;
-    /* background: rgba(47, 106, 69, 0.1); */
     padding: 16px;
     box-sizing: border-box;
 }

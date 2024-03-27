@@ -7,7 +7,7 @@ section.category{
 }
 p.title{
     width: 100%;
-    font: bold 18px/26px "Noto+Sans+KR";
+    font: bold 18px/26px "Noto Sans KR";
     margin: 35px 0;
 }
 ul.menu{
@@ -18,7 +18,7 @@ ul.menu{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content:space-around;
-    font: normal 14px/20px "Noto+Sans+KR";
+    font: normal 14px/20px "Noto Sans KR";
     color: #bbbbbb;
 }
 ul.menu li.selected{
@@ -61,7 +61,7 @@ div.box_img img{
     object-fit: contain;
 }
 div.box_title{
-    font: normal 16px/23px "Noto+Sans+KR";
+    font: normal 16px/23px "Noto Sans KR";
     position: absolute;
     left: 160px;
     top: 50%;
@@ -93,7 +93,7 @@ div.location img{
 button.all{
     width: 80px;
     height: 20px;
-    font: normal 12px/20px "Noto+Sans+KR";
+    font: normal 12px/20px "Noto Sans KR";
     background: none;
     text-align: center;
     color: #4A705F;

@@ -8,7 +8,6 @@ section.detail_product{
     left: 0px;
 }
 nav.page_map{
-    /* 120px */
     width: 100%;
     height: 30px;
     margin: 0px auto;
@@ -17,7 +16,7 @@ nav.page_map{
 ul.page_map_list{
     width: 100%;
     height: 100%;
-    font: normal 14px/30px "Noto+Sans+KR";
+    font: normal 14px/30px "Noto Sans KR";
 }
 ul.page_map_list li{
     float: left;

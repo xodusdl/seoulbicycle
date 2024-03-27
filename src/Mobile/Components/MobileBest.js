@@ -6,7 +6,6 @@ export default function MobileBest() {
     <section className={Style.best}>
       <p className={Style.title}>Best Bicycle</p>
         <div className={Style.best_list}>
-
             <div className={Style.best_box}>
                 <div>전기</div>
                 <img src='./images/electric01.jpg' alt="전기"/>
@@ -25,7 +24,6 @@ export default function MobileBest() {
                 <p className={Style.box_title}>팝</p>
                 <p className={Style.box_text}>꾸준히 사랑받는 주니어 자전거</p>
             </div>
-
         </div>
       <button className={Style.view_more}>더보기 &#62;</button>
     </section>

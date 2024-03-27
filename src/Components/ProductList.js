@@ -44,19 +44,6 @@ export default function ProductList() {
           filterItems.map((item)=>{
             return (
               <ProductLi i={item}/>
-              // i->기사 ={item} 무대기로 받아서 함수 i로 넘겨주기 
-
-              // <li>
-              //   <Link to={`/product/${item.id}`}>
-              //   <img src={item.image} alt="상품이미지"/>
-              //       {
-              //       item.isBest===true ? <p className={Style.best_b}>best</p> : ''
-              //       }
-              //   <p className={Style.bicycle_name}>{item.name}</p>
-              //   <p className={Style.bicycle_explain}>{item.text}</p>
-              //   </Link>
-              // </li>
-
             )
           })
         }

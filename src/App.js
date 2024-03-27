@@ -11,10 +11,10 @@ import DetailProduct from './Pages/DetailProduct'
 import MobileRoot from './Mobile/Pages/MobileRoot'
 import MobileNotFound from './Mobile/Pages/MobileNotFound'
 import MobileHome from './Mobile/Pages/MobileHome'
-import MobileProduct from './Mobile/Components/MobileProduct' 
-import MobileProductsDetail from './Mobile/Components/MobileProductsDetail'
-
-
+import MobileBrand from './Mobile/Pages/MobileBrand'
+import MobileProduct from './Mobile/Pages/MobileProduct'
+import MobileCustomer from './Mobile/Pages/MobileCustomer'
+import MobileProductsDetail from './Mobile/Pages/MobileProductsDetail'
 import { isMobile } from 'react-device-detect';
 
 export default function App() {
@@ -28,10 +28,10 @@ export default function App() {
         element:<MobileRoot/>,
         errorElement:<MobileNotFound/>,
         children:[
-            {index:true, element:<MobileHome/>},
-            // {path:'/mobile/brand', element:<MobileBrand/>},
-            {path:'/mobile/product', element:<MobileProduct/>},
-            // {path:'/mobile/product/:productId', element:<MobileProductsDetail/>} 
+          {index:true, element:<MobileHome/>},
+          {path:'/mobile/brand', element:<MobileBrand/>},
+          {path:'/mobile/product', element:<MobileProduct/>},
+          {path:'/mobile/customer', element:<MobileCustomer/>},
         ]
       },
       {
@@ -47,12 +47,11 @@ export default function App() {
         element:<Root/>,
         errorElement:<NotFound/>,
         children:[
-            {index:true, element:<Home/>},
-            {path:'/about', element:<About/>},
-            {path:'/product', element:<Product/>},
-            {path:'/product/:productId', element:<DetailProduct/>},
-            {path:'/faq', element:<Faq/>}
-      
+          {index:true, element:<Home/>},
+          {path:'/about', element:<About/>},
+          {path:'/product', element:<Product/>},
+          {path:'/product/:productId', element:<DetailProduct/>},
+          {path:'/faq', element:<Faq/>}
         ]
       }
     ])

@@ -9,10 +9,10 @@ export default function MobileHeader() {
 
   const mainMenuList=[ 
     {index:0, name:'Home', path:'/', subMenuList:[]},
-    {index:1, name:'소개', path:'/', subMenuList:[{index:0, name:'브랜드', path:'/'},{index:1, name:'연혁', path:'/'}]},
+    {index:1, name:'소개', path:'/', subMenuList:[{index:0, name:'브랜드', path:'/mobile/brand'},{index:1, name:'연혁', path:'/'}]},
     {index:2, name:'이용안내', path:'/', subMenuList:[{index:0, name:'정기 구독권', path:'/'}, {index:1, name:'일일 구독권', path:'/'}]},
-    {index:3, name:'자전거', path:'/', subMenuList:[{index:0, name:'전체 카테고리', path:'/mobile/product'}, {index:1, name:'성인', path:'/'},{index:2, name:'주니어', path:'/'}, {index:3, name:'산악', path:'/'}, {index:4, name:'전기', path:'/'}]},
-    {index:4, name:'문의/FAQ', path:'/', subMenuList:[{index:0, name:'공지사항', path:'/'},{index:1, name:'문의하기', path:'/'} ,{index:2, name:'자주하는 질문', path:'/'}]}
+    {index:3, name:'자전거 카테고리', path:'/', subMenuList:[{index:0, name:'전체 보기', path:'/mobile/product'}, {index:1, name:'성인', path:'/'},{index:2, name:'주니어', path:'/'}, {index:3, name:'산악', path:'/'}, {index:4, name:'전기', path:'/'}]},
+    {index:4, name:'문의/FAQ', path:'/', subMenuList:[{index:0, name:'고객문의', path:'/mobile/customer'},{index:1, name:'공지사항', path:'/'} ,{index:2, name:'자주하는 질문', path:'/'}]}
   ]
 
   const menuWrap=useRef();
@@ -74,7 +74,7 @@ export default function MobileHeader() {
                   <li className={`${item.index===selectedIndex && Style.selected}`} style={item.index===selectedIndex ? {height:55+(55*item.subMenuList.length)} : {height:55}} onClick={()=>{
                     menuActiveIndex(item.index!==selectedIndex ? item.index : null)
                   }}>
-                    {item.subMenuList.length < 1 ? // 서브메뉴가 존재하지 않을때
+                    {item.subMenuList.length < 1 ?
                       <>
                         {item.name}
                       </>
@@ -84,7 +84,7 @@ export default function MobileHeader() {
                         <span className={Style.mobile_icon}><img src="/images/mobilemenu_icon04.png" alt=""/></span>
                         <ul className={Style.mobilesubmenu_list}>
                           {
-                            item.subMenuList.map((item)=>( // 서브메뉴 map() 으로 돌리기 
+                            item.subMenuList.map((item)=>(
                               <Link to={item.path}><li onClick={menuClose}>{item.name}</li></Link>
                             ))
                           }
@@ -96,38 +96,6 @@ export default function MobileHeader() {
               )
               })
             }
-
-
-              {/* <li>HOME</li>
-              <li>소개
-                  <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
-                  <ul className={Style.mobilesubmenu_list}>
-                      <li>브랜드</li>
-                      <li>연혁</li>
-                  </ul>
-              </li>
-              <li>이용안내
-                  <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
-              </li>
-              <li>자전거
-                  <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
-                  <ul className={Style.mobilesubmenu_list}>
-                      <li>성인</li>
-                      <li>주니어</li>
-                      <li>전기</li>
-                      <li>산악</li>
-                  </ul>
-              </li>
-              <li>문의/FAQ
-                  <span className={Style.mobile_icon}><img src="images/mobilemenu_icon04.png" alt=""/></span>
-                  <ul className={Style.mobilesubmenu_list}>
-                      <li>공지사항</li>
-                      <li>문의하기</li>
-                      <li>자주하는 질문</li>
-                  </ul>
-              </li> */}
-
-
           </ul>
       </div>
   </nav>

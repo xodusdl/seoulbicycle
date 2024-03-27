@@ -14,7 +14,6 @@ p.title{
 div.best_list{
     width: 870px;
     height: 176px;
-    /* overflow: hidden; */
 }
 div.best_box{
     background: #fff;
@@ -33,7 +32,7 @@ div.best_box div{
     width: 36px;
     height: 16px;
     background: #4A705F;
-    font: normal 12px/16px "Noto+Sans+KR";
+    font: normal 12px/16px "Noto Sans KR";
     text-align: center;
     color: #fff;
     position: absolute;
@@ -52,14 +51,14 @@ div.best_box img{
 p.box_title{
     width: 90px;
     height: 23px;
-    font: bold 16px/23px "Noto+Sans+KR";
+    font: bold 16px/23px "Noto Sans KR";
     position: absolute;
     top: 40px;
     left: 20px;
 }
 p.box_text{
     width: 90px;
-    font: normal 12px/17px "Noto+Sans+KR";
+    font: normal 12px/17px "Noto Sans KR";
     position: absolute;
     top: 80px;
     left: 20px;
@@ -67,7 +66,7 @@ p.box_text{
 button.view_more{
     width: 68px;
     height: 20px;
-    font: normal 12px/20px "Noto+Sans+KR";
+    font: normal 12px/20px "Noto Sans KR";
     position: relative;
     left: 50%;
     margin-left: -34px;
