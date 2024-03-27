@@ -15,7 +15,7 @@ export default function MobileCustomer() {
         </li>
         <li>
           <p className={Style.question}><span>Q. </span>자전거 반납은 어떻게 하나요?</p>
-          <p className={Style.answer}><span>A. </span>따릉이를 대여하신 곳과 상관없이 가까운 따릉이 대여소에 반납하시면 됩니다.</p>
+          <p className={Style.answer}><span>A. </span>대여하신 곳과 상관없이 가까운 대여소에 반납하시면 됩니다.</p>
         </li>
         <li>
           <p className={Style.question}><span>Q. </span>대여나 반납은 24시간 가능한가요?</p>

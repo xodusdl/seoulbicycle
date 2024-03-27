@@ -3,6 +3,7 @@ import Style from './css/MobileProductsDetail.module.css'
 import { useParams } from 'react-router-dom';
 import { getProductDetail } from '../../api/firebase';
 import MobileContentTitle from '../Components/MobileContentTitle';
+import MobileFooter from './MobileFooter';
 
 export default function MobileProductsDetail() {
 
@@ -36,6 +37,7 @@ export default function MobileProductsDetail() {
       </div>
       <div>
       </div>
+      <MobileFooter/>
     </section>
   )
 }
